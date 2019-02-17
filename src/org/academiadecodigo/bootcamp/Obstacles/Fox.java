@@ -6,12 +6,17 @@ public class Fox extends Obstacle {
 
 
     public final static int SPEED = 1;
+    private boolean collidable;
     Picture fox;
 
-    /*   public Fox(GridPosition pos) {
-           super(pos, Obstacle.FOX);
-       }
-*/
+    public boolean isCollidable() {
+        return collidable;
+    }
+
+    public void setCollidable(Boolean collidable) {
+        this.collidable = collidable;
+    }
+
     public Fox() {
         fox = new Picture(60, 60, "fox.png");
         fox.draw();
@@ -19,6 +24,8 @@ public class Fox extends Obstacle {
 
     @Override
     public void move() {
+
+        fox.translate(-30, 0);
 
 
     }

@@ -14,7 +14,7 @@ public class TestObstacles {
 
        Obstacle obs = ObstacleFactory.getNewObstacle();
 
-       obs.move();
+
 
 
 
