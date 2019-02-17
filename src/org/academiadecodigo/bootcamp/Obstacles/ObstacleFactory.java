@@ -2,11 +2,6 @@ package org.academiadecodigo.bootcamp.Obstacles;
 
 public class ObstacleFactory {
 
-        /**
-         * Manufactures new random cars
-         *
-         * @return a newly instantiated car
-         */
         public static Obstacle getNewObstacle(Grid grid) {
 
 
@@ -18,7 +13,6 @@ public class ObstacleFactory {
                     tractor = new Tractor();
                     break;
                 default:
-                    car = new Fiat(grid.makeGridPosition());
             }
 
             return ;

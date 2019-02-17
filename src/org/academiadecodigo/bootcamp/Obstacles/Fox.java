@@ -14,6 +14,7 @@ public class Fox extends Obstacle {
         public void move() {
 
 
+
         }
     }
 
