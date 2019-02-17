@@ -26,6 +26,8 @@ public class Tractor extends Obstacle{
 
     @Override
     public void move() {
+        //condition to grid end
+        //speed Change
         tractor.translate(40,0);
 
     }

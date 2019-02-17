@@ -18,13 +18,14 @@ public class Fox extends Obstacle {
     }
 
     public Fox() {
-        fox = new Picture(60, 60, "fox.png");
+        fox = new Picture(560, 60, "fox.png");
         fox.draw();
     }
 
     @Override
     public void move() {
-
+        //condition to grid end
+        //speed change
         fox.translate(-30, 0);
 
 
