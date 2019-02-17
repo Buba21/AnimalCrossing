@@ -2,20 +2,30 @@ package org.academiadecodigo.bootcamp.Obstacles;
 
 public class ObstacleFactory {
 
-        public static Obstacle getNewObstacle(Grid grid) {
+        public static Obstacle getNewObstacle() {
 
+            int random = (int) (Math.random() * ObstacleType.values().length);
+            ObstacleType obstacleType = ObstacleType.values()[random];
 
-            switch (ObstacleType) {
+            Obstacle obstacle;
+
+            switch (obstacleType) {
                 case FOX:
-                    fox = new Fox();
+                    obstacle = new Fox();
+
                     break;
                 case TRACTOR:
-                    tractor = new Tractor();
+                    obstacle = new Tractor();
                     break;
                 default:
+                    System.out.println("something really really weird happened");
+                    obstacle = new Fox();
             }
 
-            return ;
+            return obstacle;
+
+
+
 
         }
 

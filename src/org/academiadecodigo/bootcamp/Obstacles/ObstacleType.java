@@ -4,10 +4,10 @@ package org.academiadecodigo.bootcamp.Obstacles;
 
 public enum ObstacleType {
 
-    FOX("fox.jpg"),
-    TRACTOR("tractor.jpg");
+    FOX,
+    TRACTOR;
 
-
+/*
     private int v1;
     private int v2;
 
@@ -20,7 +20,7 @@ public enum ObstacleType {
     public String getSource() {
         //
     }
-
+*/
 
 
 }
