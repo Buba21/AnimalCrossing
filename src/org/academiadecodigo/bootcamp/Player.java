@@ -1,6 +1,5 @@
 package org.academiadecodigo.bootcamp;
 
-import org.academiadecodigo.bootcamp.MovementMappers.KeyboardEvents;
 import org.academiadecodigo.simplegraphics.graphics.Rectangle;
 import org.academiadecodigo.simplegraphics.keyboard.Keyboard;
 import org.academiadecodigo.simplegraphics.keyboard.KeyboardEvent;
@@ -17,7 +16,6 @@ public class Player implements KeyboardHandler {
     public Player() {
         pictureClicked = new Picture(10,10,"JumpRight.png");
         pictureReleased = new Picture(0,0,"");
-        KeyboardEvents keyboardEvents;
         kb = new Keyboard(this);
 
 
