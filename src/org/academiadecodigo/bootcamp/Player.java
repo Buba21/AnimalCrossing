@@ -1,5 +1,6 @@
 package org.academiadecodigo.bootcamp;
 
+import org.academiadecodigo.bootcamp.MovementMappers.KeyboardEvents;
 import org.academiadecodigo.simplegraphics.graphics.Rectangle;
 import org.academiadecodigo.simplegraphics.keyboard.Keyboard;
 import org.academiadecodigo.simplegraphics.keyboard.KeyboardEvent;
@@ -14,9 +15,11 @@ public class Player implements KeyboardHandler {
     private Picture pictureReleased;
 
     public Player() {
-        pictureClicked = new Picture(0,0,"");
-        pictureReleased= new Picture(0,0,"");
+        pictureClicked = new Picture(10,10,"JumpRight.png");
+        pictureReleased = new Picture(0,0,"");
+        KeyboardEvents keyboardEvents;
         kb = new Keyboard(this);
+
 
         KeyboardEvent rightPressed = new KeyboardEvent();
         rightPressed.setKey(KeyboardEvent.KEY_RIGHT);
@@ -41,19 +44,19 @@ public class Player implements KeyboardHandler {
     }
 
     public void moveRight() {
-        picture.translate(30, 0);
+        pictureClicked.translate(30, 0);
     }
 
     public void moveLeft() {
-        picture.translate(-30, 0);
+        pictureClicked.translate(-30, 0);
     }
 
     public void moveUp() {
-        picture.translate(0, -30);
+        pictureClicked.translate(0, -30);
     }
 
     public void moveDown() {
-        picture.translate(0, 30);
+        pictureClicked.translate(0, 30);
     }
 
 
@@ -71,6 +74,9 @@ public class Player implements KeyboardHandler {
 
 
     }
+    @Override
+    public void keyReleased(KeyboardEvent keyboardEvent) {
 
+    }
 
 }
