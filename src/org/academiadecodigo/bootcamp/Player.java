@@ -1,6 +1,5 @@
 package org.academiadecodigo.bootcamp;
 
-import org.academiadecodigo.simplegraphics.graphics.Rectangle;
 import org.academiadecodigo.simplegraphics.keyboard.Keyboard;
 import org.academiadecodigo.simplegraphics.keyboard.KeyboardEvent;
 import org.academiadecodigo.simplegraphics.keyboard.KeyboardEventType;
@@ -11,11 +10,10 @@ public class Player implements KeyboardHandler {
 
     private Keyboard kb;
     private Picture pictureClicked;
-    private Picture pictureReleased;
+
 
     public Player() {
         pictureClicked = new Picture(10,10,"Bunny/BunnyJumpRight.png");
-        pictureReleased = new Picture(0,0,"");
         kb = new Keyboard(this);
 
 
