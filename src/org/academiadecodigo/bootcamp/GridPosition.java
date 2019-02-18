@@ -93,6 +93,20 @@ public class GridPosition {
         }
     }
 
+    //falta diferenciar posiçao logica e grafica
+
+    /*
+    Comparaçao da posiçao logica e gráfica
+
+        double initialX = picture.getX();
+        double initialY = picture.getY();
+        super.moveInDirection(direction);
+        double finalX = simpleGfxGrid.columnToX(getCol());
+        double finalY = simpleGfxGrid.rowToY(getRow());
+        picture.translate(finalX-initialX, finalY-initialY);
+
+        */
+
     public void moveInDirectionObstacles(Direction direction, int speed) {
 
         switch (direction) {
@@ -114,9 +128,12 @@ public class GridPosition {
     //endregion
 
     public void show() {
+        picture.draw();
     }
 
     public void stop() {
+        //podiamos mudar para outra imagem e fazer novamente um draw
+        picture.delete();
     }
 
     //region Getters
