@@ -14,8 +14,8 @@ public class Player implements KeyboardHandler {
     private Picture pictureReleased;
 
     public Player() {
-        pictureClicked = new Picture(10,10,"Bunny/BunnyJumpRight.png");
-        pictureReleased = new Picture(0,0,"");
+        //pictureClicked = new Picture(10,10,"Bunny/BunnyUp.png");
+        //pictureReleased = new Picture(0,0,"");
         kb = new Keyboard(this);
 
 
@@ -40,6 +40,11 @@ public class Player implements KeyboardHandler {
         kb.addEventListener(downPressed);
 
     }
+    public void bunnyInit(){
+        pictureClicked = new Picture(10,10,"Bunny/BunnyUp.png");
+        pictureClicked.draw();
+
+    }
 
     public void moveRight() {
         pictureClicked.translate(30, 0);
@@ -59,14 +64,14 @@ public class Player implements KeyboardHandler {
 
 
     @Override
-    public void keyPressed(KeyboardEvent position) {
-        if (position.getKey() == KeyboardEvent.KEY_RIGHT) {
+    public void keyPressed(KeyboardEvent event) {
+        if (event.getKey() == KeyboardEvent.KEY_RIGHT) {
             moveRight();
-        } else if (position.getKey() == KeyboardEvent.KEY_LEFT) {
+        } else if (event.getKey() == KeyboardEvent.KEY_LEFT) {
             moveLeft();
-        } else if (position.getKey() == KeyboardEvent.KEY_UP) {
+        } else if (event.getKey() == KeyboardEvent.KEY_UP) {
             moveUp();
-        } else if (position.getKey() == KeyboardEvent.KEY_DOWN) {
+        } else if (event.getKey() == KeyboardEvent.KEY_DOWN) {
             moveDown();
         }
 
