@@ -1,24 +1,24 @@
 package org.academiadecodigo.bootcamp;
 
-import org.academiadecodigo.simplegraphics.graphics.Rectangle;
+import org.academiadecodigo.simplegraphics.pictures.Picture;
 
 public class Grid {
 
     // region Properties
     private final int PADDING = 10;
-    private final int CELL_SIZE = 30;
-    private Rectangle field;
-    private final int COLS = 21;
-    private final int ROWS = 16;
+    private final int CELL_SIZE = 60;
+    private int cols = 15;
+    private int rows = 13;
     // endregion
 
-    public Grid(){
-        this.field = new Rectangle(PADDING, PADDING, getWidth(), getHeight());
-    }
-
     public void init() {
-        this.field.draw();
-        // TODO: Load background tiles.
+        for (int row = 0; row < rows; row++) {
+            for (int col = 0; col < cols; col++) {
+                Picture tile = new Picture(columnToX(col), rowToY(row), "GrassTile.png");
+                tile.grow(15, 15); // TODO: arranjar uma tile 60x60
+                tile.draw();
+            }
+        }
     }
 
     public int columnToX(int column) {
@@ -38,26 +38,21 @@ public class Grid {
         return CELL_SIZE;
     }
 
-    public Rectangle getField() {
-        return field;
-    }
-
     public int getWidth() {
-        return COLS * CELL_SIZE;
+        return cols * CELL_SIZE;
     }
 
     public int getHeight() {
-        return ROWS * CELL_SIZE;
+        return rows * CELL_SIZE;
     }
 
     public int getCols() {
-        return COLS;
+        return cols;
     }
 
     public int getRows() {
-        return ROWS;
+        return rows;
     }
     // endregion
-
 
 }

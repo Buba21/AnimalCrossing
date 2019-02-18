@@ -1,31 +1,30 @@
 package org.academiadecodigo.bootcamp.Obstacles;
 
+import org.academiadecodigo.bootcamp.MovementMappers.Direction;
+
 public class ObstacleFactory {
 
-        /**
-         * Manufactures new random cars
-         *
-         * @return a newly instantiated car
-         */
-        public static Obstacle getNewObstacle(Grid grid) {
+	public static Obstacle getNewObstacle() {
 
+		int random = (int)(Math.random() * ObstacleType.values().length);
+		ObstacleType obstacleType = ObstacleType.values()[random];
 
-            switch (ObstacleType) {
-                case FOX:
-                    fox = new Fox();
-                    break;
-                case TRACTOR:
-                    tractor = new Tractor();
-                    break;
-                default:
-                    car = new Fiat(grid.makeGridPosition());
-            }
+		Obstacle obstacle;
 
-            return ;
+		switch (obstacleType) {
+			case FOX:
+				obstacle = new Fox();
+				break;
+			case TRACTOR:
+				obstacle = new Tractor();
+				break;
+			default:
+				System.out.println("something really really weird happened");
+				obstacle = new Fox();
+		}
 
-        }
+		return obstacle;
 
+	}
 
-
-
-    }
+}

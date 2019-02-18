@@ -1,6 +1,6 @@
 package org.academiadecodigo.bootcamp;
 
-import org.academiadecodigo.simplegraphics.graphics.Rectangle;
+
 import org.academiadecodigo.simplegraphics.keyboard.Keyboard;
 import org.academiadecodigo.simplegraphics.keyboard.KeyboardEvent;
 import org.academiadecodigo.simplegraphics.keyboard.KeyboardEventType;
@@ -11,12 +11,11 @@ public class Player implements KeyboardHandler {
 
     private Keyboard kb;
     private Picture pictureClicked;
-    private Picture pictureReleased;
+
 
     public Player() {
-        pictureClicked = new Picture(0,0,"");
-        pictureReleased= new Picture(0,0,"");
         kb = new Keyboard(this);
+
 
         KeyboardEvent rightPressed = new KeyboardEvent();
         rightPressed.setKey(KeyboardEvent.KEY_RIGHT);
@@ -39,38 +38,46 @@ public class Player implements KeyboardHandler {
         kb.addEventListener(downPressed);
 
     }
+    public void bunnyInit(){
+        pictureClicked = new Picture(10,10,"Bunny/BunnyJumpRight.png");
+        pictureClicked.draw();
+
+    }
 
     public void moveRight() {
-        picture.translate(30, 0);
+        pictureClicked.translate(30, 0);
     }
 
     public void moveLeft() {
-        picture.translate(-30, 0);
+        pictureClicked.translate(-30, 0);
     }
 
     public void moveUp() {
-        picture.translate(0, -30);
+        pictureClicked.translate(0, -30);
     }
 
     public void moveDown() {
-        picture.translate(0, 30);
+        pictureClicked.translate(0, 30);
     }
 
 
     @Override
-    public void keyPressed(KeyboardEvent position) {
-        if (position.getKey() == KeyboardEvent.KEY_RIGHT) {
+    public void keyPressed(KeyboardEvent event) {
+        if (event.getKey() == KeyboardEvent.KEY_RIGHT) {
             moveRight();
-        } else if (position.getKey() == KeyboardEvent.KEY_LEFT) {
+        } else if (event.getKey() == KeyboardEvent.KEY_LEFT) {
             moveLeft();
-        } else if (position.getKey() == KeyboardEvent.KEY_UP) {
+        } else if (event.getKey() == KeyboardEvent.KEY_UP) {
             moveUp();
-        } else if (position.getKey() == KeyboardEvent.KEY_DOWN) {
+        } else if (event.getKey() == KeyboardEvent.KEY_DOWN) {
             moveDown();
         }
 
 
     }
+    @Override
+    public void keyReleased(KeyboardEvent keyboardEvent) {
 
+    }
 
 }
