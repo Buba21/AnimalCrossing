@@ -7,7 +7,7 @@ public class Grid {
     // region Properties
     private final int PADDING = 10;
     private final int CELL_SIZE = 30;
-    private int cols = 21;
+    private int cols = 19;
     private int rows = 16;
     // endregion
 
