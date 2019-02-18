@@ -7,14 +7,14 @@ public class Grid {
     // region Properties
     private final int PADDING = 10;
     private final int CELL_SIZE = 30;
-    private final int COLS = 21;
-    private final int ROWS = 16;
+    private int cols = 21;
+    private int rows = 16;
     // endregion
 
     public void init() {
-        for (int row = 0; row < ROWS; row++) {
-            for (int col = 0; col < COLS; col++) {
-                Picture tile = new Picture(columnToX(col), rowToY(row), "grassTile.png");
+        for (int row = 0; row < rows; row++) {
+            for (int col = 0; col < cols; col++) {
+                Picture tile = new Picture(columnToX(col), rowToY(row), "GrassTile.png");
                 tile.draw();
             }
         }
@@ -38,21 +38,20 @@ public class Grid {
     }
 
     public int getWidth() {
-        return COLS * CELL_SIZE;
+        return cols * CELL_SIZE;
     }
 
     public int getHeight() {
-        return ROWS * CELL_SIZE;
+        return rows * CELL_SIZE;
     }
 
     public int getCols() {
-        return COLS;
+        return cols;
     }
 
     public int getRows() {
-        return ROWS;
+        return rows;
     }
     // endregion
-
 
 }
