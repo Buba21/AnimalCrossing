@@ -5,7 +5,6 @@ import org.academiadecodigo.bootcamp.CollisionDetector;
 
 abstract public class Obstacle implements Collidable {
 
-
 /*
     protected CollisionDetector collisionDetector;
     protected GridDirection currentDirection;

@@ -19,7 +19,7 @@ public class Test {
         bunny.grow(15, 15);
         bunny.draw();
         Thread.sleep(1000);
-        /*bunny.delete();
+        bunny.delete();
 
         bunny = new Picture(middleCol, lastRow, "Bunny/BunnyJumpUp.png");
         bunny.grow(15, 15);
@@ -66,7 +66,7 @@ public class Test {
         bunny = new Picture(middleCol, lastRow, "Bunny/BunnyRight.png");
         bunny.grow(-45, 15);
         bunny.draw();
-        Thread.sleep(1000);*/
+        Thread.sleep(1000);
         // endregion
 
     }

@@ -1,5 +1,7 @@
 package org.academiadecodigo.bootcamp.Obstacles;
 
+import org.academiadecodigo.bootcamp.MovementMappers.Direction;
+
 public class ObstacleFactory {
 
 	public static Obstacle getNewObstacle() {
