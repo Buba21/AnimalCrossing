@@ -14,7 +14,7 @@ public class Player implements KeyboardHandler {
     private Picture pictureReleased;
 
     public Player() {
-        pictureClicked = new Picture(10,10,"JumpRight.png");
+        pictureClicked = new Picture(10,10,"Bunny/BunnyJumpRight.png");
         pictureReleased = new Picture(0,0,"");
         kb = new Keyboard(this);
 

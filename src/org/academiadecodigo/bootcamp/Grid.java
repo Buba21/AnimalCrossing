@@ -6,15 +6,16 @@ public class Grid {
 
     // region Properties
     private final int PADDING = 10;
-    private final int CELL_SIZE = 30;
-    private int cols = 19;
-    private int rows = 16;
+    private final int CELL_SIZE = 60;
+    private int cols = 15;
+    private int rows = 13;
     // endregion
 
     public void init() {
         for (int row = 0; row < rows; row++) {
             for (int col = 0; col < cols; col++) {
                 Picture tile = new Picture(columnToX(col), rowToY(row), "GrassTile.png");
+                tile.grow(15, 15); // TODO: arranjar uma tile 60x60
                 tile.draw();
             }
         }

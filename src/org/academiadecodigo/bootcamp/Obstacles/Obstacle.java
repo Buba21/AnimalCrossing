@@ -1,10 +1,10 @@
 package org.academiadecodigo.bootcamp.Obstacles;
 
+import org.academiadecodigo.bootcamp.Collidable;
 import org.academiadecodigo.bootcamp.CollisionDetector;
 
-abstract public class Obstacle {
+abstract public class Obstacle implements Collidable {
 
-    private boolean collidable;
 
 /*
     protected CollisionDetector collisionDetector;
@@ -20,18 +20,6 @@ abstract public class Obstacle {
 
 */
 
-    public boolean isCollidable() {
-        return collidable;
-    }
-
-    public void setCollidable(Boolean collidable) {
-        this.collidable = collidable;
-    }
-
     abstract public void move();
-
-
-
-
 
 }
