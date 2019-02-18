@@ -68,6 +68,7 @@ public class Test {
         bunny.draw();
         Thread.sleep(1000);
         // endregion
-
+        Player player = new Player();
+        player.bunnyInit();
     }
 }
