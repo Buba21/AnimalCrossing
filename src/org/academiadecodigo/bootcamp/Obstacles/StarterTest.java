@@ -1,20 +1,18 @@
 package org.academiadecodigo.bootcamp.Obstacles;
 
 
+import org.academiadecodigo.bootcamp.Grid;
+import org.academiadecodigo.bootcamp.GridPosition;
 import org.academiadecodigo.simplegraphics.graphics.Rectangle;
 
 public class StarterTest {
 
-    Rectangle rectangle = new Rectangle(10,10,600,480);
-
-
-
-
+    private Grid grid = new Grid();
 
 
     public void start() throws InterruptedException{
-        rectangle.draw();
-        Obstacle obs = ObstacleFactory.getNewObstacle();
+        grid.init();
+        Obstacle obs = ObstacleFactory.getNewObstacle(new GridPosition(0,0, grid), grid);
 
         while (true) {
 

@@ -14,7 +14,7 @@ public class Test {
         int lastRow = grid.rowToY(grid.getRows() - 1);
         int middleCol = grid.columnToX((grid.getCols() / 2));
 
-        // TODO: Aumentar o tamanho do sprite para 60x60)
+       /*// TODO: Aumentar o tamanho do sprite para 60x60)
         Picture bunny = new Picture(middleCol, lastRow, "Bunny/BunnyUp.png");
         bunny.grow(15, 15);
         bunny.draw();
@@ -67,8 +67,14 @@ public class Test {
         bunny.grow(-45, 15);
         bunny.draw();
         Thread.sleep(1000);
-        // endregion
+        // endregion*/
+
+        // region Bunny move test
         Player player = new Player();
         player.bunnyInit();
+        // endregion
+
+        Lane l1 = new Lane(grid, grid.getRows()-2);
+        l1.generateCollidable();
     }
 }

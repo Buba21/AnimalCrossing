@@ -16,7 +16,6 @@ public class Player implements KeyboardHandler {
     public Player() {
         kb = new Keyboard(this);
 
-
         KeyboardEvent rightPressed = new KeyboardEvent();
         rightPressed.setKey(KeyboardEvent.KEY_RIGHT);
         rightPressed.setKeyboardEventType(KeyboardEventType.KEY_PRESSED);
@@ -63,18 +62,22 @@ public class Player implements KeyboardHandler {
 
     @Override
     public void keyPressed(KeyboardEvent event) {
-        if (event.getKey() == KeyboardEvent.KEY_RIGHT) {
-            moveRight();
-        } else if (event.getKey() == KeyboardEvent.KEY_LEFT) {
-            moveLeft();
-        } else if (event.getKey() == KeyboardEvent.KEY_UP) {
-            moveUp();
-        } else if (event.getKey() == KeyboardEvent.KEY_DOWN) {
-            moveDown();
+        switch (event.getKey()) {
+            case KeyboardEvent.KEY_RIGHT:
+                moveRight();
+                break;
+            case KeyboardEvent.KEY_LEFT:
+                moveLeft();
+                break;
+            case KeyboardEvent.KEY_UP:
+                moveUp();
+                break;
+            case KeyboardEvent.KEY_DOWN:
+                moveDown();
+                break;
         }
-
-
     }
+
     @Override
     public void keyReleased(KeyboardEvent keyboardEvent) {
 

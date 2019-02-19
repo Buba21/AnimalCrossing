@@ -9,20 +9,16 @@ import org.academiadecodigo.bootcamp.MovementMappers.Direction;
 abstract public class Obstacle implements Collidable {
 
     private GridPosition pos;
-    private Grid grid;
     private ObstacleType obstacleType;
+    private Grid grid;
 
 
     private Direction direction;
 
 
-    public Obstacle (GridPosition pos, ObstacleType obstacleType){
+    public Obstacle (GridPosition pos, ObstacleType obstacleType, Grid grid){
         this.pos = pos;
         this.obstacleType= obstacleType;
-    }
-
-    public void setGrid(Grid grid) {
-        this.grid = grid;
     }
 
     public GridPosition getPos() {
