@@ -2,12 +2,24 @@ package org.academiadecodigo.bootcamp.Obstacles;
 
 import org.academiadecodigo.bootcamp.Collidable;
 import org.academiadecodigo.bootcamp.CollisionDetector;
+import org.academiadecodigo.bootcamp.Grid;
+import org.academiadecodigo.bootcamp.GridPosition;
+import org.academiadecodigo.bootcamp.MovementMappers.Direction;
 
 abstract public class Obstacle implements Collidable {
 
-/*
-    protected CollisionDetector collisionDetector;
-    protected GridDirection currentDirection;
+    private GridPosition pos;
+    private Grid grid;
+    private ObstacleType obstacleType;
+
+
+    private Direction direction;
+
+
+    public Obstacle (GridPosition pos, ObstacleType obstacleType){
+        this.pos = pos;
+        this.obstacleType= obstacleType;
+    }
 
     public void setGrid(Grid grid) {
         this.grid = grid;
@@ -17,7 +29,16 @@ abstract public class Obstacle implements Collidable {
         return pos;
     }
 
-*/
+    public Direction chooseDirection(){
+        return null;
+
+    }
+
+
+
+
+
+
 
     abstract public void move();
 

@@ -1,5 +1,6 @@
 package org.academiadecodigo.bootcamp.Obstacles;
 
+import org.academiadecodigo.bootcamp.GridPosition;
 import org.academiadecodigo.simplegraphics.pictures.Picture;
 
 public class Tractor extends Obstacle {
@@ -8,9 +9,8 @@ public class Tractor extends Obstacle {
     Picture tractor;
 
 
-    public Tractor() {
-        tractor = new Picture(40,40, "tractor.png");
-        tractor.draw();
+    public Tractor(GridPosition pos) {
+        super(pos, ObstacleType.TRACTOR);
     }
 
 
